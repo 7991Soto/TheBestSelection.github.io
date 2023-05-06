@@ -58,7 +58,7 @@
   
   /* Texto debajo del menú */
   .description {
-    padding: 100px;
+    padding: 100px 50px;
     text-align: center;
     margin: 0px;
   }
