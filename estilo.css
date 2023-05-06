@@ -70,30 +70,43 @@
     padding: 20px 0;
     font-size: 14px;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 50px; /* Reducir el margen superior del footer */
   }
 
   /* Pagina siguiente */
-
+  
   .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   
   .pagination a {
     color: #000;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 2px;
+    padding: 8px 16px;
     text-decoration: none;
-    padding: 10px;
+    transition: background-color 0.3s;
   }
   
-  .pagination a:hover {
-    background-color: #eee;
-    border-radius: 5px;
+  .pagination a.active {
+    background-color: #464946;
+    color: white;
   }
   
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+  }
+  
+  .pagination .previous {
+    margin-right: 5px;
+  }
+  
+  .pagination .next {
+    margin-left: 5px;
+  }
+  
+
   /* Galería de fotos */
 
   .gallery {
@@ -102,10 +115,12 @@
     justify-content: center;
     align-items: center;
     margin: 0;
+    position: relative;
+    top: -50px;
   }
   
   .gallery a {
-    flex-basis: calc(20% - 10px);
+    flex-basis: calc(40% - 10px);
     margin: 5px;
     width: 100%;
     height: auto;
@@ -115,13 +130,14 @@
   .gallery img {
     width: 100%;
     height: auto;
-    max-width: 200px;
+    max-width: 150px;
     border-radius: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
     margin: 1px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
   }
   
   /* Logos de redes sociales */
@@ -145,7 +161,7 @@
   }
 
 /* Dispositivos pequeños (móviles) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
   /* Ajustes para la galería de fotos */
   .gallery, img, body {
     flex-basis: calc(50% - 10px);
